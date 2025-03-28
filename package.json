@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://carlynexim.com",
+  "homepage": "https://steffinjoe.github.io/carlynexim",
   "eslintConfig": {
     "extends": [
       "react-app",
