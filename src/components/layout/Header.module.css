@@ -1,0 +1,113 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    z-index: 1000;
+    box-shadow: var(--shadow-md);
+    padding: var(--space-sm) 0;
+  }
+  
+  .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+  }
+  
+  .logo span {
+    color: var(--secondary-color);
+  }
+  
+  .nav {
+    display: flex;
+  }
+  
+  .nav ul {
+    display: flex;
+    gap: var(--space-lg);
+  }
+  
+  .navLink {
+    font-weight: 500;
+    padding: var(--space-xs) 0;
+    position: relative;
+  }
+  
+  .navLink::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: var(--transition-normal);
+  }
+  
+  .navLink:hover::after {
+    width: 100%;
+  }
+  
+  .menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-sm);
+    z-index: 1001;
+  }
+  
+  .menuToggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--text-light);
+    margin: 5px 0;
+    transition: var(--transition-normal);
+  }
+  
+  .menuToggle span.open {
+    background-color: var(--secondary-color);
+  }
+  
+  @media (max-width: 768px) {
+    .menuToggle {
+      display: block;
+    }
+    
+    .nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: var(--primary-dark);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: var(--transition-normal);
+      padding: var(--space-2xl);
+    }
+    
+    .nav.open {
+      right: 0;
+    }
+    
+    .nav ul {
+      flex-direction: column;
+      gap: var(--space-xl);
+      text-align: center;
+    }
+    
+    .navLink {
+      font-size: var(--text-lg);
+    }
+  }
