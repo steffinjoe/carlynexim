@@ -3,12 +3,12 @@ export const contactInfo = {
       {
         icon: '📍',
         title: 'Address',
-        content: '123 Export Avenue, Business District, Mumbai 400001, India'
+        content: '71A, Sankarapuram, New Colony, Tuticorin, Tamilnadu, India - 628003'
       },
       {
         icon: '📞',
         title: 'Phone',
-        content: ['+91 98765 43210', '+91 98765 43211']
+        content: ['+91 9443979369']
       },
       {
         icon: '✉️',

@@ -1,14 +1,9 @@
 import React from 'react';
 import SectionTitle from '../common/SectionTitle';
 import styles from './About.module.css';
+import { stats } from '../../constants/stats';
 
 const About = () => {
-  const stats = [
-    { value: '12+', label: 'Years of Experience' },
-    { value: '25+', label: 'Countries Served' },
-    { value: '5000+', label: 'Tons Exported Yearly' },
-    { value: '100%', label: 'Quality Assurance' }
-  ];
 
   return (
     <section id="about" className={`section ${styles.about}`}>
@@ -17,15 +12,13 @@ const About = () => {
           <div className={styles.aboutText}>
             <SectionTitle 
               title="About Carlyn Exim"
-              subtitle="Our journey in agricultural exports"
-              align="left"
             />
             <div className={styles.textContent}>
               <p>
                 Founded in 2010, Carlyn Exim has grown from a small regional exporter to a trusted international supplier of premium agricultural products. Our focus on quality, reliability, and sustainable sourcing has earned us long-term partnerships with clients across four continents.
               </p>
               <p>
-                We work directly with farmers through our network of 150+ partner farms, implementing strict quality control measures at every stage from harvest to packaging. Our state-of-the-art processing facilities ensure products meet international food safety standards.
+                We work directly with farmers through our network of farms, implementing strict quality control measures at every stage from harvest to packaging. Our state-of-the-art processing facilities ensure products meet international food safety standards.
               </p>
             </div>
             <div className={styles.stats}>

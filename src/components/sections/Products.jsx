@@ -4,6 +4,7 @@ import SectionTitle from '../common/SectionTitle';
 import Card from '../common/Card';
 import Button from '../common/Button';
 import styles from './Products.module.css';
+import ImageCarousel from '../common/ImageCarousel';
 
 const Products = () => {
   return (
@@ -11,18 +12,15 @@ const Products = () => {
       <div className="container">
         <SectionTitle 
           title="Our Premium Products"
-          subtitle="Exporting quality agricultural products with global standards"
         />
         
         <div className={styles.productsGrid}>
           {products.map((product) => (
             <Card key={product.id} className={styles.productCard}>
-              <div className={styles.imageContainer}>
-                <img 
-                  src={product.image} 
-                  alt={product.title}
-                  loading="lazy"
-                  className={styles.productImage}
+              <div>
+                <ImageCarousel
+                    images={product.imagePaths} 
+                    delay={5000} // 5 seconds between slides
                 />
               </div>
               <div className={styles.cardContent}>
@@ -35,14 +33,6 @@ const Products = () => {
                       <li key={index}>{variety}</li>
                     ))}
                   </ul>
-                </div>
-                <div className={styles.cta}>
-                  <Button variant="outline" size="small">
-                    View Details
-                  </Button>
-                  <Button size="small">
-                    Request Quote
-                  </Button>
                 </div>
               </div>
             </Card>

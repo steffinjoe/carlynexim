@@ -1,7 +1,6 @@
 .footer {
     background-color: var(--primary-dark);
     color: var(--text-light);
-    padding: var(--space-2xl) 0 0;
   }
   
   .footerContent {
@@ -119,6 +118,7 @@
     .footerBottom {
       flex-direction: row;
       justify-content: space-between;
+      padding-bottom: var(--space-md);
       align-items: center;
       text-align: left;
     }
