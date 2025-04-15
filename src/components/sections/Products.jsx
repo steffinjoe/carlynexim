@@ -2,7 +2,6 @@ import React from 'react';
 import { products } from '../../constants/products';
 import SectionTitle from '../common/SectionTitle';
 import Card from '../common/Card';
-import Button from '../common/Button';
 import styles from './Products.module.css';
 import ImageCarousel from '../common/ImageCarousel';
 

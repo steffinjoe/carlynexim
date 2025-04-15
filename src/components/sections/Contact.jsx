@@ -1,28 +1,9 @@
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import React from 'react';
 import { contactInfo } from '../../constants/contactInfo';
 import SectionTitle from '../common/SectionTitle';
-import Button from '../common/Button';
 import styles from './Contact.module.css';
 
 const Contact = () => {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-
-  const onSubmit = async (data) => {
-    setIsSubmitting(true);
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setSubmitSuccess(true);
-      reset();
-    } catch (error) {
-      console.error('Submission error:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <section id="contact" className={`section ${styles.contact}`}>
