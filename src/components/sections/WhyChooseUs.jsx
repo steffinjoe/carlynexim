@@ -9,7 +9,7 @@ const WhyChooseUs = () => {
       <div className="container">
         <SectionTitle 
           title="Why Choose Us"
-          subtitle="We stand out from the competition through our commitment to excellence"
+          subtitle=""
         />
         
         <div className={styles.featuresGrid}>
